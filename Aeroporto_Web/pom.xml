@@ -9,11 +9,22 @@
   </parent>
   <artifactId>Aeroporto_Web</artifactId>
   <packaging>war</packaging>
-  <name>Aeroporto_Web Maven Webapp</name>
+  <name>Aeroporto_Web</name>
   <url>http://maven.apache.org</url>
   
   <dependencies>
-    
+
+  <dependency>
+  	<groupId>com.sun.faces</groupId>
+  	<artifactId>jsf-api</artifactId>
+  	<version>2.1.14</version>
+  </dependency>
+  
+  <dependency>
+  	<groupId>com.sun.faces</groupId>
+  	<artifactId>jsf-impl</artifactId>
+  	<version>2.1.14</version>
+  </dependency>
   </dependencies>
   
   <build>
