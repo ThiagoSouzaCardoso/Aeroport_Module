@@ -9,7 +9,8 @@
     <name>Aeroporto_Project</name>
 
     <modules>
-    <module>Aeroporto_Core</module>
+    <module>Aeroporto_Core</module> 
+    <module>Aeroporto_Model</module>
   </modules>
 
     <build>
