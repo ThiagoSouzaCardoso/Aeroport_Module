@@ -7,13 +7,16 @@
     <groupId>br.com.usjt.aeroporto</groupId>
     <version>1.0</version>
   </parent>
-  <artifactId>Aeroporto_Core</artifactId>
-  <name>Aeroporto_Core</name>
-  <url>http://maven.apache.org</url>
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  <dependencies>
-    
-  </dependencies>
+  
+	  <artifactId>Aeroporto_Core</artifactId>
+	  <name>Aeroporto_Core</name>
+	  <url>http://maven.apache.org</url>
+  
+	  <properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	  </properties>
+  
+	  <dependencies>
+	    
+	  </dependencies>
 </project>

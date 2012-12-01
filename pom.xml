@@ -11,19 +11,39 @@
     <modules>
     <module>Aeroporto_Core</module> 
     <module>Aeroporto_Model</module>
+    <module>Aeroporto_Web</module>
   </modules>
+  
+    <properties>
+		<compileSource>1.6</compileSource>
+	</properties>
 
     <build>
         <pluginManagement>
             <plugins>
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <configuration>
-                        <source>1.5</source>
-                        <target>1.5</target>
-                    </configuration>
-                </plugin>
+        		<groupId>org.apache.maven.plugins</groupId>
+        		<artifactId>maven-compiler-plugin</artifactId>
+        		<version>3.0</version>
+	        	 <configuration>
+	        		<source>${compileSource}</source>
+					<target>${compileSource}</target>
+	        		<optimize>true</optimize>
+					<showDeprecation>true</showDeprecation>
+					<showWarnings>true</showWarnings>
+					<encoding>UTF-8</encoding>
+	        	 </configuration>
+        	</plugin>
+        	<plugin>
+        		<groupId>org.apache.maven.plugins</groupId>
+        		<artifactId>maven-pmd-plugin</artifactId>
+        		<version>2.7.1</version>
+        		<configuration>
+					<source>${compileSource}</source>
+					<target>${compileSource}</target>
+					<targetJdk>${compileSource}</targetJdk>
+				</configuration>
+        	</plugin>
             </plugins>
         </pluginManagement>
     </build>
