@@ -13,21 +13,40 @@
   <url>http://maven.apache.org</url>
   
   <dependencies>
-
-  <dependency>
-  	<groupId>com.sun.faces</groupId>
-  	<artifactId>jsf-api</artifactId>
-  	<version>2.1.14</version>
-  </dependency>
-  
-  <dependency>
-  	<groupId>com.sun.faces</groupId>
-  	<artifactId>jsf-impl</artifactId>
-  	<version>2.1.14</version>
-  </dependency>
+	  <dependency>
+			  	<groupId>com.sun.faces</groupId>
+			  	<artifactId>jsf-api</artifactId>
+			  	<version>2.1.14</version>
+	  </dependency>
+	  <dependency>
+			  	<groupId>com.sun.faces</groupId>
+			  	<artifactId>jsf-impl</artifactId>
+			  	<version>2.1.14</version>
+	  </dependency>
+	  <dependency>
+				<groupId>org.primefaces</groupId>
+				<artifactId>primefaces</artifactId>
+				<version>3.4.2</version>
+	  </dependency>
+	  <dependency>
+	  	<groupId>javax.el</groupId>
+	  	<artifactId>javax.el-api</artifactId>
+	  	<version>2.2.4</version>
+	  </dependency>
   </dependencies>
+  
+  <!-- Maven repositories -->
+	<repositories>
+    	<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<layout>default</layout>
+		</repository>
+	</repositories> 
   
   <build>
     <finalName>Aeroporto_Web</finalName>
   </build>
+  
 </project>
