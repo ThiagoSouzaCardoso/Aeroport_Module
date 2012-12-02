@@ -15,8 +15,12 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-  
+  		
   <dependencies>
-    
+   <dependency>
+	  	<groupId>br.com.usjt.aeroporto</groupId>
+	  	<artifactId>Aeroporto_Core</artifactId>
+	  	<version>1.0</version>
+	  </dependency>
   </dependencies>
 </project>

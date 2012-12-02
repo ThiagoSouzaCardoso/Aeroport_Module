@@ -33,6 +33,11 @@
 	  	<artifactId>javax.el-api</artifactId>
 	  	<version>2.2.4</version>
 	  </dependency>
+	  <dependency>
+	  	<groupId>br.com.usjt.aeroporto</groupId>
+	  	<artifactId>Aeroporto_Model</artifactId>
+	  	<version>1.0</version>
+	  </dependency>
   </dependencies>
   
   <!-- Maven repositories -->
