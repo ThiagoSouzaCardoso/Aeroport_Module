@@ -56,7 +56,7 @@ public class AeronaveBean implements Serializable {
 
 	public void salvarAeronave() {
 		aeronaveService.salvarAeronave(aeronave);
-//		clean();
+		clean();
 //		MessageUtil.addMessage("msg_sucessOk", "tlt_cadastre", SEVERITY_INFO);
 
 	}
