@@ -1,13 +1,13 @@
 package br.com.usjt.aeroporto.entity;
 
 import java.io.Serializable;
-//import java.util.List;
+import java.util.List;
 
 import javax.persistence.Entity;
-//import javax.persistence.FetchType;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-//import javax.persistence.OneToMany;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -15,10 +15,8 @@ import org.hibernate.validator.constraints.NotBlank;
 @Entity
 public class Aeronave implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -5552083734025912959L;
+
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -26,8 +24,8 @@ public class Aeronave implements Serializable {
 	private String nome;
 	@NotNull
 	private Integer quantidadeAssentos;
-//	@OneToMany(mappedBy = "aeronave", fetch = FetchType.EAGER)
-//	private List<Voo> listVoos;
+	@OneToMany(mappedBy = "aeronave", fetch = FetchType.EAGER)
+	private List<Voo> listVoos;
 
 	/**
 	 * @return the id
@@ -74,20 +72,20 @@ public class Aeronave implements Serializable {
 		this.quantidadeAssentos = quantidadeAssentos;
 	}
 
-//	/**
-//	 * @return the listVoos
-//	 */
-//	public List<Voo> getListVoos() {
-//		return listVoos;
-//	}
-//
-//	/**
-//	 * @param listVoos
-//	 *            the listVoos to set
-//	 */
-//	public void setListVoos(List<Voo> listVoos) {
-//		this.listVoos = listVoos;
-//	}
+	/**
+	 * @return the listVoos
+	 */
+	public List<Voo> getListVoos() {
+		return listVoos;
+	}
+
+	/**
+	 * @param listVoos
+	 *            the listVoos to set
+	 */
+	public void setListVoos(List<Voo> listVoos) {
+		this.listVoos = listVoos;
+	}
 
 	/*
 	 * (non-Javadoc)
@@ -99,7 +97,7 @@ public class Aeronave implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		//result = prime * result + ((listVoos == null) ? 0 : listVoos.hashCode());
+		result = prime * result + ((listVoos == null) ? 0 : listVoos.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		result = prime * result + ((quantidadeAssentos == null) ? 0 : quantidadeAssentos.hashCode());
 		return result;
@@ -129,13 +127,13 @@ public class Aeronave implements Serializable {
 		} else if (!id.equals(other.id)) {
 			return false;
 		}
-//		if (listVoos == null) {
-//			if (other.listVoos != null) {
-//				return false;
-//			}
-//		} else if (!listVoos.equals(other.listVoos)) {
-//			return false;
-//		}
+		if (listVoos == null) {
+			if (other.listVoos != null) {
+				return false;
+			}
+		} else if (!listVoos.equals(other.listVoos)) {
+			return false;
+		}
 		if (nome == null) {
 			if (other.nome != null) {
 				return false;
@@ -160,8 +158,6 @@ public class Aeronave implements Serializable {
 	 */
 	@Override
 	public String toString() {
-		return "Aeronave [id=" + id + ", nome=" + nome + ", quantidadeAssentos=" + quantidadeAssentos + 
-				//", listVoos=" + listVoos + 
-				"]";
+		return "Aeronave [id=" + id + ", nome=" + nome + ", quantidadeAssentos=" + quantidadeAssentos + ", listVoos=" + listVoos + "]";
 	}
 }
