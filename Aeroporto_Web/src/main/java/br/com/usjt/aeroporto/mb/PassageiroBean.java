@@ -1,10 +1,10 @@
 package br.com.usjt.aeroporto.mb;
 
+import static br.com.usjt.aeroporto.mb.MessageUtil.addMessageEnum;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
 import javax.faces.model.SelectItem;
 
 import org.springframework.context.annotation.Scope;
@@ -14,8 +14,6 @@ import br.com.usjt.aeroporto.entity.FormaTratamento;
 import br.com.usjt.aeroporto.entity.Passageiro;
 import br.com.usjt.aeroporto.entity.TipoPassageiro;
 
-@ManagedBean(name = "passageiroBean")
-@ViewScoped
 @Component
 @Scope("session")
 public class PassageiroBean {
@@ -25,6 +23,7 @@ public class PassageiroBean {
 	/**
 	 * @return the passageiro
 	 */
+
 	public Passageiro getPassageiro() {
 		return passageiro;
 	}
@@ -42,7 +41,7 @@ public class PassageiroBean {
 		List<SelectItem> listFormaTratamento = new ArrayList<SelectItem>();
 
 		for (FormaTratamento ft : FormaTratamento.values()) {
-			listFormaTratamento.add(new SelectItem(ft.name(), ft.toString()));
+			listFormaTratamento.add(new SelectItem(ft.name(), addMessageEnum(ft.name())));
 		}
 		return listFormaTratamento;
 	}
@@ -50,13 +49,9 @@ public class PassageiroBean {
 	public List<SelectItem> getTipoPassageiro() {
 		List<SelectItem> listTipoPassageiro = new ArrayList<SelectItem>();
 		for (TipoPassageiro ft : TipoPassageiro.values()) {
-			listTipoPassageiro.add(new SelectItem(ft.name(), ft.toString()));
+			listTipoPassageiro.add(new SelectItem(ft.name(), addMessageEnum(ft.name())));
 		}
 		return listTipoPassageiro;
-	}
-
-	public void salvarPassageiro() {
-
 	}
 
 	public void clean() {
