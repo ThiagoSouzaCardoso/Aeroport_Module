@@ -13,19 +13,19 @@
 			
 				<!--<fieldset>-->
 				<div align="left">
-					<p:panel id="pnl" header="#{bundle.label_aircraft_data}"> 
+					<p:panel id="pnl" header="#{msg.label_aircraft_data}"> 
 				
 				<!--<legend>#{bundle.label_aircraft_data}</legend>-->
 					<h:panelGrid columns="4">
-							<h:outputText value="nome"/><br/>
+							<h:outputText value="#{msg.label_aircraft_name}"/><br/>
 							<p:inputText value="#{aeronaveBean.aeronave.nome}" id="nome" />
 							<p:message for="nome"/>
 							
-							<h:outputText value="assentos" for="assentos"/><br/>
+							<h:outputText value="#{msg.label_aircraft_seats}" for="assentos"/><br/>
 							<p:inputText id="quantidadeAssentos" value="#{aeronaveBean.aeronave.quantidadeAssentos}" />
 							<p:message for="quantidadeAssentos"/>
 							
-					<p:commandButton value="acao" update="dadosAeronaves messagem" action="#{aeronaveBean.salvarAeronave}">
+					<p:commandButton value="#{msg.label_saveaircraft}" update="dadosAeronaves messagem" action="#{aeronaveBean.salvarAeronave}">
 					</p:commandButton>
 
 					</h:panelGrid>
