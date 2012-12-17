@@ -1,6 +1,5 @@
 package br.com.usjt.aeroporto.mb;
 
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,9 +20,6 @@ import br.com.usjt.aeroporto.service.AeronaveService;
 @Scope("session")
 public class AeronaveBean implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 5111562560040908083L;
 
 	private Aeronave aeronave = new Aeronave();
@@ -57,15 +53,10 @@ public class AeronaveBean implements Serializable {
 	public void salvarAeronave() {
 		aeronaveService.salvarAeronave(aeronave);
 		clean();
-//		MessageUtil.addMessage("msg_sucessOk", "tlt_cadastre", SEVERITY_INFO);
-
 	}
 
 	public void consultaAeronave() {
 		this.listaAeronaves = aeronaveService.consultaAeronave(aeronave);
-
-		//if (listaAeronaves.isEmpty())
-			//MessageUtil.addMessage("tlt_consult", "msg_errorForSearch", SEVERITY_ERROR);
 
 	}
 
