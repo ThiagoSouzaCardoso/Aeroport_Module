@@ -1,4 +1,4 @@
-package br.com.usjt.aeroporto.mb;
+package br.com.usjt.aeroporto.utils;
 
 import java.util.ResourceBundle;
 
