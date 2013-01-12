@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
@@ -15,7 +14,6 @@ import br.com.usjt.aeroporto.entity.Aeronave;
 import br.com.usjt.aeroporto.service.AeronaveService;
 
 @ManagedBean(name = "aeronaveBean")
-@SessionScoped
 @Component
 @Scope("session")
 public class AeronaveBean implements Serializable {

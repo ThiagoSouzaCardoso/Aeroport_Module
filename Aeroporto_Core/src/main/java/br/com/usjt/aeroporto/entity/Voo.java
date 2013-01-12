@@ -29,8 +29,8 @@ public class Voo implements Serializable {
 	@ManyToOne
 	private Aeronave aeronave;
 
-//	@OneToMany(mappedBy = "voo")
-//	private List<Passagem> listPassagem;
+	@OneToMany(mappedBy = "voo")
+	private List<Passagem> listPassagem;
 
 	/**
 	 * @return the id
@@ -137,18 +137,19 @@ public class Voo implements Serializable {
 		this.aeronave = aeronave;
 	}
 
-//	/**
-//	 * @return the listPassagem
-//	 */
-//	public List<Passagem> getListPassagem() {
-//		return listPassagem;
-//	}
-//
-//	/**
-//	 * @param listPassagem the listPassagem to set
-//	 */
-//	public void setListPassagem(List<Passagem> listPassagem) {
-//		this.listPassagem = listPassagem;
-//	}
+	/**
+	 * @return the listPassagem
+	 */
+	public List<Passagem> getListPassagem() {
+		return listPassagem;
+	}
+
+	/**
+	 * @param listPassagem
+	 *            the listPassagem to set
+	 */
+	public void setListPassagem(List<Passagem> listPassagem) {
+		this.listPassagem = listPassagem;
+	}
 
 }

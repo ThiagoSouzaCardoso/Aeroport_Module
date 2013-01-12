@@ -1,10 +1,11 @@
 package br.com.usjt.aeroporto.mb;
 
-import static br.com.usjt.aeroporto.mb.MessageUtil.addMessageEnum;
+import static br.com.usjt.aeroporto.utils.MessageUtil.addMessageEnum;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.faces.bean.ManagedBean;
 import javax.faces.model.SelectItem;
 
 import org.springframework.context.annotation.Scope;
@@ -16,6 +17,7 @@ import br.com.usjt.aeroporto.entity.TipoPassageiro;
 
 @Component
 @Scope("session")
+@ManagedBean(name = "passageiroBean")
 public class PassageiroBean {
 
 	private Passageiro passageiro = new Passageiro();
@@ -56,6 +58,10 @@ public class PassageiroBean {
 
 	public void clean() {
 		this.passageiro = new Passageiro();
+	}
+
+	public void salvaPassageiro() {
+
 	}
 
 }
