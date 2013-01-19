@@ -13,6 +13,9 @@
 </h:head>
 <h:body>
 <div align="center">
+
+<f:view locale="#{internacionalizacaoBean.locale}"/>
+
 		<h:form>
 		
 				<p:toolbar style="text-align: center; width: 900px">
@@ -58,8 +61,8 @@
 		</div>
 	</div>
 	<div id="blocoConteudo">
-		<div class="container">
-			<ui:insert name="corpo"/>
+		<div class="container" align="center">
+			<ui:insert name="corpo" />
 		</div>
 	</div>
 	
