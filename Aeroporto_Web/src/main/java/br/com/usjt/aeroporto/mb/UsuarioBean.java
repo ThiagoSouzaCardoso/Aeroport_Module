@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Component;
 
 import br.com.usjt.aeroporto.entity.Usuario;
@@ -24,7 +23,7 @@ public class UsuarioBean {
 		if (context instanceof SecurityContext) {
 			Authentication authentication = context.getAuthentication();
 			if (authentication instanceof Authentication) {
-				usuario.setLogin(((User) authentication.getPrincipal()).getUsername());
+				usuario.setLogin(((Usuario) authentication.getPrincipal()).getUsername());
 			}
 		}
 	}
